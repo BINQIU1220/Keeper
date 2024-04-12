@@ -1,13 +1,18 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Note from "./components/Note";
+import Notes from "./components/Notes";
+import CreateArea from "./components/CreateArea";
+import { useState } from "react";
 
 function App() {
+  const [notes, setNotes] = useState([]);
+
   return (
     <div className="App">
       <Header />
-      <Note />
+      <CreateArea notes={notes} setNotes={setNotes} />
+      <Notes notes={notes} setNotes={setNotes} />
       <Footer />
     </div>
   );

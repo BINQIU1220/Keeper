@@ -1,3 +1,5 @@
+import DeleteIcon from "@mui/icons-material/Delete";
+
 function Notes(props) {
   function handleDelete(id) {
     props.setNotes((prevNotes) => {
@@ -19,7 +21,7 @@ function Notes(props) {
                 handleDelete(index);
               }}
             >
-              DELETE
+              <DeleteIcon />
             </button>
           </div>
         );
